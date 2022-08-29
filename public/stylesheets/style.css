@@ -8,11 +8,6 @@ a {
   color: #00B7FF;
 }
 
-#splash {
-  display: flex;
-  justify-content: center; 
-}
-
 #splash-text {
   position: absolute; 
   display: flex; 
@@ -28,9 +23,9 @@ a {
 }
 
 #login {
-  position: absolute; 
+  position: relative; 
   height: 3rem; 
-  margin: 105px 0px 200px 20px;
+  margin: 105px 500px 200px 0px;
 }
 
 #main-page-title{
@@ -102,4 +97,15 @@ a {
   padding:20px;
 }
 
+#new-story-form-row{
+  margin: 20px 0px 0px 100px; 
+  padding:20px;
+  font-family: 'crimson text';
+  font-size: 1.5rem; 
+}
+
+.universal-navbar{
+  font-family: 'crimson-text';
+  font-size: 1.5rem; 
+}
 
