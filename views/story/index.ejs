@@ -4,13 +4,30 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel='stylesheet' href='/stylesheets/style.css' />
         <link href="https://fonts.googleapis.com/css2?family=Josefin Sans" rel="stylesheet">
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
         <script src="/js/jquery.min.js"></script>
         <script src="/js/bootstrap.min.js"></script>
-        <title>Main</title>
+        <title>Story</title>
     </head>
     <body>
-        <h1>Stories go here</h1>
+
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="/about" role="tab" aria-controls="nav-home" aria-selected="true">About</a>
+                <a class="nav-item nav-link active" id="nav-profile-tab" data-toggle="tab" href="/story" role="tab" aria-controls="nav-profile" aria-selected="false">Story</a>
+                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="/main" role="tab" aria-controls="nav-contact" aria-selected="false">Main</a>
+            </div>
+        </nav>
+        
+        <div class="story-content">
+            <p>Stories go here</p>
+        </div>
+       
+
+        <a id="new-story-link" href="/story/new">Add a new story</a>
+        
+    </nav>
     </body>
 </html>

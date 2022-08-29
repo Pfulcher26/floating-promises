@@ -1,17 +1,16 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'josefin sans';
   background-image: url('../images/seamless\ stone.jpg');
-  display: flex;
-  justify-content: center; 
 }
 
 a {
   color: #00B7FF;
 }
 
-.outer {
-  
+#splash {
+  display: flex;
+  justify-content: center; 
 }
 
 #splash-text {
@@ -32,5 +31,13 @@ a {
   position: absolute; 
   height: 3rem; 
   margin: 105px 0px 200px 20px;
+}
+
+.story-content{
+  padding:20px;
+}
+
+#new-story-link{
+  margin:20px; 
 }
 
