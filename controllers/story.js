@@ -9,7 +9,17 @@ function newStory(req, res){
     res.render('story/new')
 }
 
+function createStory(req, res){
+    const story = new Story(req.body);
+    story.save(function(err) {
+        if (err) return res.redirect('/story');
+        res.redirect(`/story`);
+    });
+}
+
+
 module.exports = {
     show,
-    newStory
+    newStory,
+    createStory,
 };
