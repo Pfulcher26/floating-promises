@@ -23,9 +23,14 @@ function commentDisplay(req, res){
     res.render('story/comment');
 }
 
+function commentCreate(req, res){
+    res.redirect('/story');
+}
+
 module.exports = {
     show,
     newStory,
     createStory,
-    commentDisplay 
+    commentDisplay,
+    commentCreate
 };
