@@ -2,7 +2,9 @@ const Story = require('../models/stories');
 const User = require('../models/user');
 
 function show(req, res){
-    res.render('story/index');
+    Story.find({}, function(err, stories) {
+        res.render('story/index', { stories });
+    });
 }
 
 function newStory(req, res){
@@ -12,8 +14,8 @@ function newStory(req, res){
 function createStory(req, res){
     const story = new Story(req.body);
     story.save(function(err) {
-        if (err) return res.redirect('/story');
-        res.redirect(`/story`);
+        if (err) return res.redirect('story/index');
+        res.redirect('story/index');
     });
 }
 
