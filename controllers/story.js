@@ -1,3 +1,6 @@
+const Story = require('../models/stories');
+const User = require('../models/user');
+
 function show(req, res){
     res.render('story/index');
 }

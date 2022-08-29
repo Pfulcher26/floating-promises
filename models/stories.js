@@ -1,6 +1,25 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+const commentSchema = new Schema({
+    comment: String, 
+    name: {
+        type: String,
+        required: true
+    },
+    date: {
+        type: Number,
+        default: function () {
+            return new Date().getFullYear();
+        }
+    },
+    userName: String,
+    userAvatar: String,
+    user: {type: Schema.Types.ObjectId, ref: 'User'},
+}, {
+    timestamps: true
+});
+
 const storySchema = new Schema({
     story: String,
     name: String, 
@@ -18,25 +37,6 @@ const storySchema = new Schema({
     userName: String,
     userAvatar: String,
     user: {type: Schema.Types.ObjectId, ref: 'User'}
-}, {
-    timestamps: true
-});
-
-const commentSchema = new Schema({
-    comment: String, 
-    name: {
-        type: String,
-        required: true
-    },
-    date: {
-        type: Number,
-        default: function () {
-            return new Date().getFullYear();
-        }
-    },
-    userName: String,
-    userAvatar: String,
-    user: {type: Schema.Types.ObjectId, ref: 'User'},
 }, {
     timestamps: true
 });
