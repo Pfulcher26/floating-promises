@@ -22,10 +22,15 @@
         </nav>
         
         <div class="story-content">
-            <p>Stories go here</p>
+            <tbody>
+                <% stories.forEach(function(s) { %>
+                    <tr>
+                    <td><%= s.story %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
         </div>
-       
-
+        
         <a id="new-story-link" href="/story/new">Add a new story</a>
         
     </nav>
