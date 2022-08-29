@@ -14,11 +14,10 @@ function newStory(req, res){
 function createStory(req, res){
     const story = new Story(req.body);
     story.save(function(err) {
-        if (err) return res.redirect('story/index');
-        res.redirect('story/index');
+        if (err) return res.redirect('/story');
+        res.redirect('/story');
     });
 }
-
 
 module.exports = {
     show,

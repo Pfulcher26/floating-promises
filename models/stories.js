@@ -21,18 +21,19 @@ const commentSchema = new Schema({
 });
 
 const storySchema = new Schema({
-    story: String,
-    name: String, 
-    age: Number, 
-    location: String,
-    date: {
-        type: Number,
-        default: function () {
-            return new Date().getFullYear();
-        }
+    name: {
+        type: String,
+        required: true
     }, 
+    age: {
+        type: String,
+        required: true
+    },
+    location: String, 
     timeframe: {  type: String,
         enum: ['1 month', 'six months', 'one year', 'year plus']},
+    date: Date,
+    story: String, 
     comments: [commentSchema],
     userName: String,
     userAvatar: String,

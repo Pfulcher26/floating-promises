@@ -4,6 +4,6 @@ const storyCtrl = require('../controllers/story');
 
 router.get('/', storyCtrl.show);
 router.get('/new', storyCtrl.newStory);
-router.post('/new', storyCtrl.createStory);
+router.post('/', storyCtrl.createStory);
 
 module.exports = router;
