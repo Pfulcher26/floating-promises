@@ -19,7 +19,18 @@ a {
   display: flex; 
   color: black; 
   font-family: 'josefin sans';
-  font-size: 3rem;  
-  margin: 700px; 
+  font-size: 2rem;  
+  margin: 15px 0px 0px 10px;
+  border-color: #919191;
+  background-color: #e2e2e2;
+  box-shadow: inset 0 3px 0 0 #f1f1f1, inset 0 -4px 0 0 #ababab;
+  color: #0b171e;
+  padding: 10px;
+}
+
+#login {
+  position: absolute; 
+  height: 3rem; 
+  margin: 20px 200px 0px 390px;
 }
 
