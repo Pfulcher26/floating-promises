@@ -31,7 +31,7 @@ const storySchema = new Schema({
             return new Date().getFullYear();
         }
     }, 
-    time: {  type: String,
+    timeframe: {  type: String,
         enum: ['1 month', 'six months', 'one year', 'year plus']},
     comments: [commentSchema],
     userName: String,

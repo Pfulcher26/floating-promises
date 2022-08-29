@@ -21,7 +21,29 @@
             </div>
         </nav>
         
-        <p>work on form</p>
+        <form id="new-story-form" action="/story" method="POST">
+            <label>Name:
+            <input type="text" name="name">
+            </label><br>
+            <label>Age:
+            <input type="text" name="age">
+            </label><br>
+            <label>Location:
+            <input type="text" name="location">
+            </label><br>
+            <label>Time-frame 
+            <select name="timeframe">
+                <option value="1 month">1 month</option>
+                <option value="six months">six months</option>
+                <option value="one year">one year</option>
+                <option value="year plus">year plus</option>
+            </select>
+            </label><br>
+            <label>Departure Date:
+                <input type="datetime-local" name="date">
+            </label><br>
+            <input type="submit" value="Publish">
+        </form>
 
     </body>
 </html>
