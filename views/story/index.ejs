@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Josefin Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Crimson Text" rel="stylesheet">
         <link rel='stylesheet' href='/stylesheets/style.css' />
         <link rel="stylesheet" href="/css/bootstrap.min.css">
         <script src="/js/jquery.min.js"></script>
@@ -22,13 +23,21 @@
         </nav>
         
         <div class="story-content">
-            <tbody>
                 <% stories.forEach(function(s) { %>
-                    <tr>
-                    <td><%= s.timeframe %></td>
-                    </tr>
+                    <div class="story-rows">
+                        <div class="story-header">
+                            <p><%= s.name %></p>
+                            <p><%= s.age %></p>
+                            <p><%= s.location %></p>
+                            <p><%= s.date %></p>
+                        </div>
+                        <div class="story-main">
+                            <p><%= s.story %></p>
+                        </div>
+                    </div>  
                 <% }); %>
             </tbody>
+        </table>
         </div>
         
         <a id="new-story-link" href="/story/new">Add a new story</a>
