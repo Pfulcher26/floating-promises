@@ -19,7 +19,7 @@ a {
   display: flex; 
   color: black; 
   font-family: 'josefin sans';
-  font-size: 2rem;  
+  font-size: 2.5rem;  
   margin: 15px 0px 0px 10px;
   border-color: #919191;
   background-color: #e2e2e2;
@@ -31,6 +31,6 @@ a {
 #login {
   position: absolute; 
   height: 3rem; 
-  margin: 20px 200px 0px 390px;
+  margin: 105px 0px 200px 20px;
 }
 
