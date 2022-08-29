@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css2?family=Josefin Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Crimson Text" rel="stylesheet">
         <link rel='stylesheet' href='/stylesheets/style.css' />
         <link rel="stylesheet" href="/css/bootstrap.min.css">
         <script src="/js/jquery.min.js"></script>
@@ -22,30 +22,36 @@
         </nav>
         
         <form id="new-story-form" action="/story" method="POST">
-            <label>Name:
+            <p>Name</p>
+            <label class = "new-story-form-row">
             <input type="text" name="name">
-            </label><br>
-            <label>Age:
+            </label class><br><br>
+            <p>Age</p>
+            <label class = "new-story-form-row"> 
             <input type="text" name="age">
-            </label><br>
-            <label>Location:
+            </label><br><br>
+            <p>Location</p>
+            <label class = "new-story-form-row">
             <input type="text" name="location">
-            </label><br>
-            <label>Time-frame 
+            </label><br><br><br>
+            <p>How recent was this passing?</p>
+            <label class = "new-story-form-row">
             <select name="timeframe">
                 <option value="1 month">1 month</option>
                 <option value="six months">six months</option>
                 <option value="one year">one year</option>
                 <option value="year plus">year plus</option>
             </select>
-            </label><br>
-            <label>Date:
+            </label><br><br>
+            <p>Date</p>
+            <label class = "new-story-form-row">
                 <input type="datetime-local" name="date">
-            </label><br>
-            <label>Story:
+            </label><br><br><br>
+            <p>Please share your story</p>
+            <label class = "new-story-form-row">
                 <input type="text" name="story">
-                </label><br>
-            <input type="submit" value="Publish">
+                </label><br><br><br>
+            <input class = "new-story-form-row" type="submit" value="Publish">
         </form>
 
     </body>

@@ -35,8 +35,18 @@ a {
 
 #main-page-title{
   font-family: 'aboreto'; 
-  margin: 100px;
+  margin: 100px 100px 10px 100px;
   font-size: 7rem; 
+}
+
+#main-page-sub-title{
+  font-family: 'aboreto'; 
+  margin: 20px 20px 20px 120px;
+  font-size: 2rem; 
+}
+
+#main-page-image{
+  margin: 100px; 
 }
 
 #about-main-text{
@@ -44,6 +54,7 @@ a {
   margin: 100px;
   font-size: 4rem; 
 }
+
 
 .story-content{
   padding:20px;
@@ -76,6 +87,19 @@ a {
 }
 
 #new-story-link{
-  margin:20px; 
+  margin:20px 0px 0px 600px; 
 }
+
+#new-story-form{
+  margin: 20px; 
+  display: block; 
+  font-family: 'crimson text';
+  font-size: 1.5rem; 
+  padding: 50px; 
+}
+
+.new-story-form-row{
+  padding:20px;
+}
+
 
