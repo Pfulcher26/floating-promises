@@ -1,8 +1,25 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url('../images/seamless\ stone.jpg');
+  display: flex;
+  justify-content: center; 
 }
 
 a {
   color: #00B7FF;
 }
+
+.outer {
+  
+}
+
+#splash-text {
+  position: absolute; 
+  display: flex; 
+  color: black; 
+  font-family: 'josefin sans';
+  font-size: 3rem;  
+  margin: 700px; 
+}
+
