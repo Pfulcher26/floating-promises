@@ -86,19 +86,18 @@ a {
 }
 
 #new-story-form{
-  margin: 20px; 
   display: block; 
   font-family: 'crimson text';
   font-size: 1.5rem; 
-  padding: 50px; 
+  padding: 20px; 
 }
 
 .new-story-form-row{
-  padding:20px;
+  font-family: 'crimson text';
+  font-size: 1.5rem; 
 }
 
-#new-story-form-row{
-  margin: 20px 0px 0px 100px; 
+#new-comment-form{
   padding:20px;
   font-family: 'crimson text';
   font-size: 1.5rem; 
