@@ -19,8 +19,13 @@ function createStory(req, res){
     });
 }
 
+function commentDisplay(req, res){
+    res.render('story/comment');
+}
+
 module.exports = {
     show,
     newStory,
     createStory,
+    commentDisplay 
 };
