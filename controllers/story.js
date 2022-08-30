@@ -19,7 +19,7 @@ function createStory(req, res){
     });
 }
 
-function deleteTicket(req, res){
+function deleteStory(req, res){
     console.log(req.params.id)
     Story.deleteOne({ _id: `${req.params.id}`},function(err, tickets){
             res.redirect('/story');
@@ -31,5 +31,5 @@ module.exports = {
     show,
     newStory,
     createStory,
-    deleteTicket 
+    deleteStory
 };
