@@ -20,8 +20,9 @@ function createStory(req, res){
 }
 
 function deleteTicket(req, res){
-    Story.deleteOne({ _id: req.params},function(err, tickets){
-            res.redirect(`/flights/${req.params.id}`);
+    console.log(req.params.id)
+    Story.deleteOne({ _id: `${req.params.id}`},function(err, tickets){
+            res.redirect('/story');
     });
 }
 
