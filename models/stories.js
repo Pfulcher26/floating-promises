@@ -26,9 +26,9 @@ const storySchema = new Schema({
     date: Date,
     story: String, 
     comments: [commentSchema],
+    user: {type: Schema.Types.ObjectId, ref: 'User'},
     userName: String,
-    userAvatar: String,
-    user: {type: Schema.Types.ObjectId, ref: 'User'}
+    userAvatar: String
 }, {
     timestamps: true
 });

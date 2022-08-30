@@ -22,7 +22,7 @@ router.get('/oauth2callback', passport.authenticate(
 
 router.get('/logout', function(req, res){
   req.logout();
-  res.redirect('/movies');
+  res.redirect('/');
 });
 
 module.exports = router;
