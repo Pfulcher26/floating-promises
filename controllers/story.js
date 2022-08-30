@@ -12,7 +12,6 @@ function newStory(req, res){
 }
 
 function createStory(req, res){
-    console.log('HELLO')
     const story = new Story(req.body);
     story.save(function(err) {
         if (err) return res.redirect('/story');
@@ -20,13 +19,16 @@ function createStory(req, res){
     });
 }
 
-function commentDisplay(req, res){
-    res.render('story/comment');
+function deleteTicket(req, res){
+    Story.deleteOne({ _id: req.params},function(err, tickets){
+            res.redirect(`/flights/${req.params.id}`);
+    });
 }
+
 
 module.exports = {
     show,
     newStory,
     createStory,
-    commentDisplay
+    deleteTicket 
 };
