@@ -3,16 +3,7 @@ const Schema = mongoose.Schema;
 
 const commentSchema = new Schema({
     comment: String, 
-    name: {
-        type: String,
-        required: true
-    },
-    date: {
-        type: Number,
-        default: function () {
-            return new Date().getFullYear();
-        }
-    },
+    date: Date,
     userName: String,
     userAvatar: String,
     user: {type: Schema.Types.ObjectId, ref: 'User'},

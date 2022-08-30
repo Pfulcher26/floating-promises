@@ -12,6 +12,7 @@ function newStory(req, res){
 }
 
 function createStory(req, res){
+    console.log('HELLO')
     const story = new Story(req.body);
     story.save(function(err) {
         if (err) return res.redirect('/story');
@@ -23,14 +24,9 @@ function commentDisplay(req, res){
     res.render('story/comment');
 }
 
-function commentCreate(req, res){
-    res.redirect('/story');
-}
-
 module.exports = {
     show,
     newStory,
     createStory,
-    commentDisplay,
-    commentCreate
+    commentDisplay
 };
