@@ -6,7 +6,13 @@ const storyCtrl = require('../controllers/story');
 router.get('/', storyCtrl.show);
 router.get('/new', storyCtrl.newStory);
 router.post('/', storyCtrl.createStory);
+//delete
 router.delete('/:id', storyCtrl.deleteStory);
-// router.put('/edit/:id', storyCtrl.editStory);
+//edit
+//display form
+router.get('/edit/:id', storyCtrl.editStory);
+//update content
+router.put 
+
 
 module.exports = router;

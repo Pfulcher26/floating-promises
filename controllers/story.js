@@ -20,20 +20,23 @@ function createStory(req, res){
 }
 
 function deleteStory(req, res){
-    console.log(req.params.id)
-    // Story.findByIdAndRemove(req.params.id, function(err, tickets){
-    //         res.redirect('/story');
-    // });
+    Story.findByIdAndRemove(req.params.id, function(err, story){
+            res.redirect('/story');
+    });
 }
 
-// function editStory(req,res){
-    
-// }
+function editStory(req,res){
+    Story.findById(req.params.id), function(err, story){
+        res.render('story/edit', {story})
+    }
+}
 
 
 module.exports = {
     show,
     newStory,
     createStory,
-    deleteStory
+    deleteStory,
+    editStory,
+    // updateStory
 };
