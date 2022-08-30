@@ -50,6 +50,11 @@ a {
   font-size: 4rem; 
 }
 
+#about-secondary-text{
+  font-family:'crimson text';
+  padding: 5px; 
+  margin: 1000px; 
+}
 
 .story-content{
   padding:20px;
@@ -106,7 +111,7 @@ a {
 #comment{
   position: relative; 
   font-family: 'crimson text';
-  margin: 15px 0px 0px 20px; 
+  margin: 17px 0px 0px 20px; 
 }
 
 #delete{
@@ -118,7 +123,7 @@ a {
 
 #edit{
   position: relative; 
-  margin: 15px 10px 50px 20px;
+  margin: 17px 10px 50px 20px;
   font-size: 1rem; 
   font-family: 'crimson text';
 }

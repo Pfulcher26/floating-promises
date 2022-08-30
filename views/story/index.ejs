@@ -30,6 +30,7 @@
                             <p><%= s.age %></p>
                             <p><%= s.location %></p>
                             <p><%= s.date %></p>
+                            <p>time since passing: </n><br> <%= s.timeframe  %></p>
                             <a id="comment" href="/story/comment/<%= s._id %>">add comment</a>
                             <a id="edit" href= "/story/edit/<%= s._id %>">edit</a>
                             <form action="/story/<%= s._id %>?_method=DELETE"
