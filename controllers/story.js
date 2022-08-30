@@ -31,6 +31,12 @@ function editStory(req,res){
     });
 }
 
+function updateStory(req,res){
+    Story.findByIdAndUpdate(req.params.id, req.body, function(err, story){
+        res.redirect('/story');
+    });
+}
+
 
 module.exports = {
     show,
@@ -38,5 +44,5 @@ module.exports = {
     createStory,
     deleteStory,
     editStory,
-    // updateStory
+    updateStory
 };
