@@ -2,14 +2,18 @@ const Story = require('../models/stories');
 const User = require('../models/user');
 
 function commentDisplay(req, res){
-    res.render('story/comment');
+    Story.findById(req.params.id, function(error, story){
+        res.render('story/comment', { story });
+    });
 }
 
 function commentCreate(req, res){
-    console.log("hellll")
-    // Story.findById(req.params.id, function(error, story){
-    //     console.log(story);
-    //     });
+    Story.findById(req.params.id, function(error, story){
+        story.comments.push(req.body);
+        story.save(function (err) {
+            res.redirect('/story');   
+        });
+    });
 }
 
 module.exports = {

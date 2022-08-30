@@ -20,8 +20,8 @@
                 <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="/main" role="tab" aria-controls="nav-contact" aria-selected="false">Main</a>
             </div>
         </nav>
-        
-        <form id="new-comment-form" action="/story" method="POST">
+    
+        <form id="new-comment-form" action="/story/comment/<%= story._id %>" method="POST">
             <p>Comment</p>
             <label class = "new-comment-form-row">
             <input type="text" name="comment">

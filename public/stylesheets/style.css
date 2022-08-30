@@ -111,19 +111,20 @@ a {
 #comment{
   position: relative; 
   font-family: 'helvetica';
-  margin: 17px 0px 0px 20px; 
+  margin: 10px 0px 0px 20px; 
 }
 
 #delete{
   position: relative; 
-  margin: 10px 10px 50px 10px;
+  margin: 3px 10px 50px 10px;
   font-size: 1rem; 
   font-family: 'helvetica';
+  color: red; 
 }
 
 #edit{
   position: relative; 
-  margin: 17px 10px 50px 20px;
+  margin: 10px 10px 50px 20px;
   font-size: 1rem; 
   font-family: 'helvetica';
 }
