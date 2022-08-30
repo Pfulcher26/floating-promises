@@ -26,9 +26,9 @@ function deleteStory(req, res){
 }
 
 function editStory(req,res){
-    Story.findById(req.params.id), function(err, story){
-        res.render('story/edit', {story})
-    }
+    Story.findById(req.params.id, function(err, story){
+        res.render('story/edit', {story});
+    });
 }
 
 
