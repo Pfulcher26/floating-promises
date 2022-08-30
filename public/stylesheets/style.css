@@ -110,7 +110,7 @@ a {
 
 #comment{
   position: relative; 
-  font-family: 'crimson text';
+  font-family: 'helvetica';
   margin: 17px 0px 0px 20px; 
 }
 
@@ -118,14 +118,14 @@ a {
   position: relative; 
   margin: 10px 10px 50px 10px;
   font-size: 1rem; 
-  font-family: 'crimson text';
+  font-family: 'helvetica';
 }
 
 #edit{
   position: relative; 
   margin: 17px 10px 50px 20px;
   font-size: 1rem; 
-  font-family: 'crimson text';
+  font-family: 'helvetica';
 }
 
 .universal-navbar{
