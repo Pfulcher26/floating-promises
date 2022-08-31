@@ -92,7 +92,7 @@ And
 ## Contact 
 Please feel free to contact me with any ideas regarding this project.  I enthusiastically encourage any outside contributions!  
 
-[Github Repository](https://github.com/Pfulcher26/project-2)
+[Github Repository](https://github.com/Pfulcher26/project-2-)
 
 Email: pfulcher26@gmail.com 
 
