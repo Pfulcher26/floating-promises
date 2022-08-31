@@ -9,7 +9,10 @@ router.get('/', function(req, res, next) {
 
 router.get('/auth/google', passport.authenticate(
   'google',
-  { scope: ['profile', 'email'] }
+  { scope: [
+    'https://www.googleapis.com/auth/userinfo.profile',
+    'https://www.googleapis.com/auth/userinfo.email'
+] }
 ));
 
 router.get('/oauth2callback', passport.authenticate(

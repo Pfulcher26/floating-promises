@@ -81,8 +81,49 @@ Simply open <a  href="https://the-weather-tomorrow.herokuapp.com/"  target="_bla
 
 **RESOLUTION**: I tried adding https://the-weather-tomorrow.herokuapp.com/auth/google/oauth2callback to a list of authorized redirect URIs in the Client ID my web app is utilizing via Google's People API, but so far no luck.   
 
+**ERROR**: createStory function not working when not logged in via Google OAuth.  
+
+**RESOLUTION**: This occurred because the function was attempting to access user information stored in the session that was not there, via the req.body.user.  Resolved the issue via a conditional statement that allows users that are not logged-in to still create content.  I don't want to require users to be logged in in order to post.  However users that are not logged in are unable to delete, or edit their posts, as they are essentially anonymous.  May need to work on a way to make this more tidy.      
+
+Original function:
+
+```
+    function createStory(req, res){
+        req.body.user = req.user._id;
+        req.body.userName = req.user.name;
+        req.body.userAvatar = req.user.avatar;
+        const story = new Story(req.body);
+        story.save(function(err) {
+            if (err) return res.redirect('/story');
+            res.redirect('/story');
+        });
+    }
+```
+
+Revised function: 
+
+```function createStory(req, res){
+    if(req.body.user){
+        req.body.user = req.user._id;
+        req.body.userName = req.user.name;
+        req.body.userAvatar = req.user.avatar;
+        const story = new Story(req.body);
+        story.save(function(err) {
+            if (err) return res.redirect('/story');
+            res.redirect('/story');
+        });
+    } else {
+        const story = new Story(req.body);
+        story.save(function(err) {
+            if (err) return res.redirect('/story');
+            res.redirect('/story');
+        });
+    }
+}
+```
+
 ## Future Development Plans
-Ideally I'd like this to be used by people and as such I anticipate some level of maintenance.  However, regardless if it ever finds a life on the internet, I would like to deepen certain functionality, such as allowing users to sort posts based on different criteria while maintaining the structural simplicity of the core design. 
+Ideally I'd like this to be used by people and as such I anticipate some level of maintenance.  However, regardless of if it ever finds a life on the internet, I would like to deepen certain functionality, such as allowing users to sort posts based on different criteria while maintaining the structural simplicity of the core design. 
 
 <a  href="https://trello.com/b/qro0Bz6q/the-weather-tomorrow" target="_blank">Here</a> is a link the my trello board for this project. 
 

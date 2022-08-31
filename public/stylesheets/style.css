@@ -86,6 +86,12 @@ a {
   font-size: 3rem; 
 }
 
+#story-box{
+  padding: 0 0 460px 0;
+  width: 300px; 
+  height: 500px; 
+}
+
 #new-story-link{
   margin:20px 0px 0px 600px; 
 }
