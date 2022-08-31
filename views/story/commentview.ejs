@@ -24,31 +24,16 @@
         </nav>
 
         <div class="story-content">
-                <% stories.forEach(function(s) { %>
-                    <div class="story-rows">
+            <a id="comment" href="/story/comment/<%= story._id %>">add comment</a>
+                <% story.comments.forEach(function(c) { %>
+                    <div class="comment-rows">
                         <div class="story-header">
-                            <p><%= s.name %></p>
-                            <p><%= s.age %></p>
-                            <p><%= s.location %></p>
-                            <p><%= s.date %></p>
-                            <p>time since passing: </n><br> <%= s.timeframe  %></p>
-                            <a id="comment" href="/story/comment/<%= s._id %>/view">view comments</a>   
-                            <% if (user && user._id.equals(s.user)) { %>
-                            <a id="edit" href= "/story/edit/<%= s._id %>">edit</a>
-                            <form action="/story/<%= s._id %>?_method=DELETE"
-                                class="delete-form" method="POST">
-                                <button id="delete" class="btn btn-outline" type="submit">delete</button>
-                            </form>
-                            <% } %>
+                            <p><%= c.comment %></p>
+                            <p><%= c.user %></p>
                         </div>
-                        <div class="story-main">
-                            <p><%= s.story %></p>
-                        </div>
-                    </div>  
                 <% }); %>
-        </div>
 
-        <a id="new-story-link" href="/story/new">Add a new story</a>   
+                <a class = "btn btn-outline-primary" id="comments-back" href="/story">Back</a>   
 
     </body>
 </html>

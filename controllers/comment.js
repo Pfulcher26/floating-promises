@@ -7,18 +7,25 @@ function commentDisplay(req, res){
     });
 }
 
+function commentView(req, res){
+    Story.findById(req.params.id, function(error, story){
+        res.render('story/commentview', { story });
+    });
+}
+
 function commentCreate(req, res){
     Story.findById(req.params.id, function(error, story){
         story.comments.push(req.body);
         story.save(function (err) {
-            res.redirect('/story');   
+            res.redirect(`/story/comment/${req.params.id}/view`);   
         });
     });
 }
 
 module.exports = {
     commentDisplay,
-    commentCreate
+    commentCreate,
+    commentView
 };
 
 
