@@ -39,7 +39,8 @@ Simply open <a  href="https://the-weather-tomorrow.herokuapp.com/"  target="_bla
 ## Project Hurdles
 
 **ERROR**: Cannot target which posts to delete.  Every time the delete button is clicked, the first comment in the comments array is deleted, irregardless of which post the user is targeting. 
-**RESOLUTION**: This was an issue that arose due to the way the fact that the form was not closed off with a closing form tag.  A forEach function is used to loop through each field in the post object model and display it to the page, along with a delete button with an ahref that targets that post's specific id.  Due to the fact that the form was not closed off, each delete button was being generated with the same id.  Once the form was closed off, each delete button was generated with the id specific to that post, thus resolving the issue. 
+
+**RESOLUTION**: This was an issue that arose due to the fact that the form was not closed off with a matching form tag.  A forEach function is used to loop through each field in the post object model and display it to the page, along with a delete button with an ahref that targets that post's specific id.  Due to the fact that the form was not closed off, each delete button was being generated with the same id.  Once the form was closed off, the delete buttons were generated with the id specific to the post, thherby resolving the issue. 
 
 ```   
     <div class="story-content">
@@ -75,7 +76,9 @@ Simply open <a  href="https://the-weather-tomorrow.herokuapp.com/"  target="_bla
                             THERE WAS NO CLOSING TAG HERE 
 ```
 
+
 **ERROR**: Google OAuth not working when site is deployed via Heroku.  Authorization error arising due to an app security policy.  It appears this issue is arising because the OAuth callback 'https://the-weather-tomorrow.herokuapp.com/auth/google/oauth2callback' is not approved. 
+
 **RESOLUTION**: I tried adding https://the-weather-tomorrow.herokuapp.com/auth/google/oauth2callback to a list of authorized redirect URIs in the Client ID my web app is utilizing via Google's People API, but so far no luck.   
 
 ## Future Development Plans
