@@ -1,6 +1,8 @@
-# ***FLOATING PROMISES***
+# ***<a  href="https://the-weather-tomorrow.herokuapp.com/"  target="_blank">FLOATING PROMISES</a>. ***
 
 *A GRIEF FORUM*
+
+
 
 ## What is Floating Promises?  
 
@@ -27,7 +29,7 @@ Contrast this against the finished UI:
 
 ## Technologies Used
 
-This is a full-stack application featuring a RESTful API server built in Node.js with Express and CRUD operations via Mongoose. Utilizes MongoDB Atlas as a non-relational database.  This project is a forum that allows users to communicate around the topic of grief, specifically as it relates to death. Utilizes a one-to-many ERD for user posts and comments.  Front-end styled with Bootstrap. 
+This is a full-stack application featuring a RESTful API server built in Node.js with Express and CRUD operations via Mongoose. Utilizes MongoDB Atlas as a non-relational database.  Utilizes a one-to-many ERD for user posts and comments.  Uses Google's people API in conjunction with Passport.js, an authentication middleware for node, to authenticate users via Gmail and authorize them to access certain user-specific features.  Front-end styling via Bootstrap.   
  
 
 ## Installation 
@@ -72,6 +74,9 @@ Simply open <a  href="https://the-weather-tomorrow.herokuapp.com/"  target="_bla
                                 <button id="delete" class="btn btn-outline" type="submit">delete</button>
                             THERE WAS NO CLOSING TAG HERE 
 ```
+
+**ERROR**: Google OAuth not working when site is deployed via Heroku.  Authorization error arising due to an app security policy.  It appears this issue is arising because the OAuth callback 'https://the-weather-tomorrow.herokuapp.com/auth/google/oauth2callback' is not approved. 
+**RESOLUTION**: I tried adding https://the-weather-tomorrow.herokuapp.com/auth/google/oauth2callback to a list of authorized redirect URIs in the Client ID my web app is utilizing via Google's People API, but so far no luck.   
 
 ## Future Development Plans
 Ideally I'd like this to be used by people and as such I anticipate some level of maintenance.  However, regardless if it ever finds a life on the internet, I would like to deepen certain functionality, such as allowing users to sort posts based on different criteria while maintaining the structural simplicity of the core design. 
