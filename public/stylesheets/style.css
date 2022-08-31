@@ -148,3 +148,11 @@ a {
 #commentsback {
   margin: 1000px;
 }
+
+#nav-contact-tab-join{
+  color: rgba(0, 0, 0, 0.981);  
+}
+
+#nav-contact-tab-leave{
+  color: rgba(113, 111, 111, 0.981); 
+}
