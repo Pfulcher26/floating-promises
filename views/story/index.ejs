@@ -16,7 +16,11 @@
 
         <nav class="universal-navbar">
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="/logout" role="tab" aria-controls="nav-contact" aria-selected="false">leave</a>
+                <% if (user) { %>
+                    <a class="nav-item nav-link" id="nav-contact-tab-leave" data-toggle="tab" href="/logout" role="tab" aria-controls="nav-contact" aria-selected="false">leave</a>
+                    <% } else { %>
+                    <a class="nav-item nav-link" id="nav-contact-tab-join" data-toggle="tab" href="/auth/google" role="tab" aria-controls="nav-contact" aria-selected="false">join</a>
+                    <% } %>    
                 <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="/about" role="tab" aria-controls="nav-home" aria-selected="true">About</a>
                 <a class="nav-item nav-link active" id="nav-profile-tab" data-toggle="tab" href="/story" role="tab" aria-controls="nav-profile" aria-selected="false">Story</a>
                 <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="/main" role="tab" aria-controls="nav-contact" aria-selected="false">Main</a>

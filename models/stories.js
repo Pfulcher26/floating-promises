@@ -22,7 +22,7 @@ const storySchema = new Schema({
     },
     location: String, 
     timeframe: {  type: String,
-        enum: ['1 month', 'six months', 'one year', 'year plus']},
+        enum: ['days', 'weeks', 'months', 'years']},
     date: Date,
     story: String, 
     comments: [commentSchema],
