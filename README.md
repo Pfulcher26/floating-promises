@@ -6,7 +6,7 @@
 
 ## What is Floating Promises?  
 
-Floating Promises is an online community that allows individuals to connect at each stage of the grieving process. Individuals can make a post, receive comments and have the option to comment on others’ posts. The emphasis is on trust, openness and unfiltered communication around the topic of death, making use of the words, images and all that is unresolved, left floating in the wake of someone's passing.
+Floating Promises is an online community that allows individuals to connect at each stage of the grieving process. Individuals can make a post, receive comments and have the option to comment on others’ posts. The emphasis is on trust, openness and unfiltered communication around the topic of death, making use of the words, images and all that is left unresolved, floating in the wake of someone's passing.
 
 ## Design Philosophy 
 
@@ -81,6 +81,8 @@ Simply open <a  href="https://the-weather-tomorrow.herokuapp.com/"  target="_bla
 
 **RESOLUTION**: I tried adding https://the-weather-tomorrow.herokuapp.com/auth/google/oauth2callback to a list of authorized redirect URIs in the Client ID my web app is utilizing via Google's People API, but so far no luck.   
 
+
+
 **ERROR**: createStory function not working when not logged in via Google OAuth.  
 
 **RESOLUTION**: This occurred because the function was attempting to access user information stored in the session that was not there, via the req.body.user.  Resolved the issue via a conditional statement that allows users that are not logged-in to still create content.  I don't want to require users to be logged in in order to post.  However users that are not logged in are unable to delete, or edit their posts, as they are essentially anonymous.  May need to work on a way to make this more tidy.      
@@ -102,21 +104,22 @@ Original function:
 
 Revised function: 
 
-```function createStory(req, res){
-    if(req.body.user){
-        req.body.user = req.user._id;
-        req.body.userName = req.user.name;
-        req.body.userAvatar = req.user.avatar;
-        const story = new Story(req.body);
-        story.save(function(err) {
-            if (err) return res.redirect('/story');
-            res.redirect('/story');
-        });
-    } else {
-        const story = new Story(req.body);
-        story.save(function(err) {
-            if (err) return res.redirect('/story');
-            res.redirect('/story');
+```
+    function createStory(req, res){
+        if(req.body.user){
+            req.body.user = req.user._id;
+            req.body.userName = req.user.name;
+            req.body.userAvatar = req.user.avatar;
+            const story = new Story(req.body);
+            story.save(function(err) {
+                if (err) return res.redirect('/story');
+                res.redirect('/story');
+            });
+        } else {
+            const story = new Story(req.body);
+            story.save(function(err) {
+                if (err) return res.redirect('/story');
+                res.redirect('/story');
         });
     }
 }
