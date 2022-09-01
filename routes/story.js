@@ -12,7 +12,7 @@ router.delete('/:id', storyCtrl.deleteStory);
 //display form
 router.get('/edit/:id', storyCtrl.editStory);
 //update content
-router.put ('/edit/:id', storyCtrl.updateStory);
+router.put('/edit/:id', storyCtrl.updateStory);
 
 
 module.exports = router;
