@@ -18,20 +18,26 @@
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
                 <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="/logout" role="tab" aria-controls="nav-contact" aria-selected="false">leave</a>
                 <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="/about" role="tab" aria-controls="nav-home" aria-selected="true">About</a>
-                <a class="nav-item nav-link active" id="nav-profile-tab" data-toggle="tab" href="/story" role="tab" aria-controls="nav-profile" aria-selected="false">Story</a>
+                <a class="nav-item nav-link active" id="nav-profile-tab" data-toggle="tab" href="/story" role="tab" aria-controls="nav-profile" aria-selected="false">Post</a>
                 <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="/main" role="tab" aria-controls="nav-contact" aria-selected="false">Main</a>
             </div>
         </nav>
 
         <div class="story-content">
-            <a id="comment" href="/story/comment/<%= story._id %>">add comment</a>
+            <% if (story.comments.length) {%>
+                <a id="comment" href="/story/comment/<%= story._id %>">add comment</a>
                 <% story.comments.forEach(function(c) { %>
                     <div class="comment-rows">
                         <div class="story-header">
                             <p><%= c.comment %></p>
                             <p><%= c.user %></p>
-                        </div>
-                <% }); %>
+                        </div>   
+                    <% }); %>
+            <% } else { %> 
+                <div class="comment-rows">
+                    <p>Not a peep</p>
+                </div>
+            <% } %> 
 
                 <a class = "btn btn-outline-primary" id="comments-back" href="/story">Back</a>   
 

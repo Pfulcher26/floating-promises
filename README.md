@@ -106,7 +106,7 @@ Revised function:
 
 ```
     function createStory(req, res){
-        if(req.body.user){
+        if(req.isAuthenticated()){
             req.body.user = req.user._id;
             req.body.userName = req.user.name;
             req.body.userAvatar = req.user.avatar;
