@@ -12,7 +12,7 @@ function newStory(req, res){
 }
 
 function createStory(req, res){
-    if(req.body.user){
+    if(req.isAuthenticated()){
         req.body.user = req.user._id;
         req.body.userName = req.user.name;
         req.body.userAvatar = req.user.avatar;
@@ -29,6 +29,18 @@ function createStory(req, res){
         });
     }
 }
+
+
+// function createStory(req, res){
+//     req.body.user = req.user._id;
+//     req.body.userName = req.user.name;
+//     req.body.userAvatar = req.user.avatar;
+//     const story = new Story(req.body);
+//     story.save(function(err) {
+//         if (err) return res.redirect('/story');
+//         res.redirect('/story');
+//     });    
+// }
 
 function deleteStory(req, res){
     Story.findByIdAndRemove(req.params.id, function(err, story){
