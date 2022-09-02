@@ -24,8 +24,8 @@
         </nav>
 
         <div class="story-content">
+            <a id="comment" href="/story/comment/<%= story._id %>">add comment</a>
             <% if (story.comments.length) {%>
-                <a id="comment" href="/story/comment/<%= story._id %>">add comment</a>
                 <% story.comments.forEach(function(c) { %>
                     <div class="comment-rows">
                         <div class="story-header">
@@ -39,7 +39,7 @@
                 </div>
             <% } %> 
 
-                <a class = "btn btn-outline-primary" id="comments-back" href="/story">Back</a>   
+        <a class = "btn btn-outline-primary" id="comments-back" href="/story">Back</a>   
 
     </body>
 </html>
