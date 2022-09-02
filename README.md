@@ -2,7 +2,7 @@
 
 *A GRIEF FORUM*
 
-<a  href="https://the-weather-tomorrow.herokuapp.com/"  target="_blank">Join</a>. 
+<a  href="https://the-weather-tomorrow.herokuapp.com/"  target="_blank">See website</a 
 
 ## What is Floating Promises?  
 
