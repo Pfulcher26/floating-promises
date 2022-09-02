@@ -132,7 +132,7 @@ Ideally I'd like this to be used by people and as such I anticipate some level o
 
 <a  href="https://whimsical.com/project-2-erd-PG1GYedq3tq9qvqeRdejoe" target="_blank">Here</a> is a link to the ERD diagram for this project. 
 
-And 
+And... 
 ## Contact 
 Please feel free to contact me with any ideas regarding this project.  I enthusiastically encourage any outside contributions!  
 
