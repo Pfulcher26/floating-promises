@@ -1,8 +1,8 @@
-# ***<a  href="https://the-weather-tomorrow.herokuapp.com/"  target="_blank">FLOATING PROMISES</a>. ***
+# ***FLOATING PROMISES***
 
 *A GRIEF FORUM*
 
-
+<a  href="https://the-weather-tomorrow.herokuapp.com/"  target="_blank">Join</a>. 
 
 ## What is Floating Promises?  
 
